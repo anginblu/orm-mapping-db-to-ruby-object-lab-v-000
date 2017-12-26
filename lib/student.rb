@@ -39,6 +39,7 @@ class Student
   end
 
   def self.count_all_students_in_grade_9
+    binding.pry
     sql = "SELECT name FROM students WHERE grade = 9"
     binding.pry
     DB[:conn].execute(sql).flatten[0]
